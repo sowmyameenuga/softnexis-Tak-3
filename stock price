@@ -1,0 +1,8 @@
+plt.figure(figsize=(12,6))
+plt.plot(df["Close"], label="AAPL Close Price")
+plt.title("Apple (AAPL) Stock Price Over Time")
+plt.xlabel("Year")
+plt.ylabel("Price (USD)")
+plt.legend()
+plt.grid(True)
+plt.show()

@@ -1,0 +1,9 @@
+decomposition = seasonal_decompose(
+    df["Close"],
+    model="additive",
+    period=252  # trading days in a year
+)
+
+fig = decomposition.plot()
+fig.set_size_inches(12,8)
+plt.show()

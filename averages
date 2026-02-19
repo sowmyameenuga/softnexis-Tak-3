@@ -1,0 +1,10 @@
+df["MA_50"] = df["Close"].rolling(window=50).mean()
+df["MA_200"] = df["Close"].rolling(window=200).mean()
+
+plt.figure(figsize=(12,6))
+plt.plot(df["Close"], label="Close Price")
+plt.plot(df["MA_50"], label="50-Day MA", linestyle="--")
+plt.plot(df["MA_200"], label="200-Day MA", linestyle="--")
+plt.legend()
+plt.title("AAPL Moving Averages")
+plt.show()

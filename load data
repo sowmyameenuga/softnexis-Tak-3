@@ -1,0 +1,10 @@
+df = pd.read_csv("aapl.csv", parse_dates=["Date"])
+
+# Set Date as index
+df.set_index("Date", inplace=True)
+
+# Keep only Close price
+df = df[["Close"]]
+
+print(df.head())
+print(df.info())
